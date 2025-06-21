@@ -56,9 +56,9 @@
             mods = <(MOD_LSFT)>;
         };
 
-        Layerstickymod: Layerstickymod {
+        lsm: lsm {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYERSTICKYMOD";
+            label = "LSM";
             bindings = <&mo>, <&sk>;
 
             #binding-cells = <2>;
@@ -194,10 +194,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E                       &kp R                           &kp T        &kp Y    &kp U      &kp I         &kp O    &kp P     &kp MINUS
-&kp ESCAPE      &kp A  &kp S  &kp D                       &kp F                           &kp G        &kp H    &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C                       &kp V                           &kp B        &kp N    &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
-                              &mt LEFT_CONTROL BACKSPACE  &Layerstickymod 1 LEFT_COMMAND  &kp SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
+&kp TAB         &kp Q  &kp W  &kp E                       &kp R                &kp T        &kp Y    &kp U                 &kp I         &kp O    &kp P     &kp MINUS
+&kp ESCAPE      &kp A  &kp S  &kp D                       &kp F                &kp G        &kp H    &kp J                 &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C                       &kp V                &kp B        &kp N    &kp M                 &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
+                              &mt LEFT_CONTROL BACKSPACE  &lsm 1 LEFT_COMMAND  &kp SPACE    &kp RET  &lsm 2 RIGHT_COMMAND  &kp LEFT_ALT
             >;
         };
 
@@ -214,7 +214,7 @@
 &trans      &kp N1  &kp N2  &kp N3          &kp N4           &kp N5           &kp N6   &kp N7        &kp N8          &kp N9  &kp N0  &trans
 &caps_word  &trans  &trans  &trans          &browsertab      &kp PAGE_UP      &kp N0   &kp N4        &kp N5          &kp N6  &trans  &trans
 &trans      &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp UP_ARROW  &kp DOWN_ARROW  &kp N3  &trans  &trans
-                            &kp LGUI        &trans           &kp SPACE        &kp RET  &trans        &trans
+                            &kp LGUI        &trans           &kp SPACE        &kp RET  &mo 3         &trans
             >;
         };
 
@@ -231,7 +231,7 @@
 &trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
 &trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
 &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &trans           &kp SPACE    &kp RET    &trans     &trans
+                                  &kp LGUI        &mo 3            &kp SPACE    &kp RET    &trans     &trans
             >;
         };
 
@@ -252,6 +252,15 @@
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans          &trans           &trans            &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
