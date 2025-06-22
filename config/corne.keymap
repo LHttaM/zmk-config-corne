@@ -194,10 +194,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB                          &kp Q  &kp W  &kp E                       &kp R                &kp T        &kp Y    &kp U                 &kp I         &kp O    &kp P     &kp MINUS
-&mt LC(LA(LEFT_COMMAND)) ESCAPE  &kp A  &kp S  &kp D                       &kp F                &kp G        &kp H    &kp J                 &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT                   &kp Z  &kp X  &kp C                       &kp V                &kp B        &kp N    &kp M                 &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
-                                               &mt LEFT_CONTROL BACKSPACE  &lsm 1 LEFT_COMMAND  &kp SPACE    &kp RET  &lsm 2 RIGHT_COMMAND  &kp LEFT_ALT
+&kp TAB                          &kp Q  &kp W  &kp E                       &kp R  &kp T        &kp Y    &kp U                 &kp I         &kp O    &kp P     &kp MINUS
+&mt LC(LA(LEFT_COMMAND)) ESCAPE  &kp A  &kp S  &kp D                       &kp F  &kp G        &kp H    &kp J                 &kp K         &kp L    &kp SEMI  &mt RA(RC(RIGHT_COMMAND)) SQT
+&kp LEFT_SHIFT                   &kp Z  &kp X  &kp C                       &kp V  &kp B        &kp N    &kp M                 &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
+                                               &mt LEFT_CONTROL BACKSPACE  &mo 1  &kp SPACE    &kp RET  &lsm 2 RIGHT_COMMAND  &kp LEFT_ALT
             >;
         };
 
@@ -211,10 +211,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans      &kp N1  &kp N2  &kp N3          &kp N4           &kp N5           &kp N6   &kp N7        &kp N8          &kp N9  &kp N0  &trans
-&caps_word  &trans  &trans  &to 3           &browsertab      &kp PAGE_UP      &kp N0   &kp N4        &kp N5          &kp N6  &trans  &trans
-&trans      &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp UP_ARROW  &kp DOWN_ARROW  &kp N3  &trans  &trans
-                            &kp LGUI        &trans           &kp SPACE        &kp RET  &trans        &trans
+&trans      &kp N1             &kp N2             &kp N3             &kp N4             &kp N5               &kp N6             &kp N7             &kp N8             &kp N9             &kp N0  &trans
+&caps_word  &kp LA(LC(LG(A)))  &kp LA(LC(LG(S)))  &kp LG(LC(LA(D)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(G)))    &kp LA(LC(LG(H)))  &kp LA(LG(LC(J)))  &kp LA(LC(LG(K)))  &kp LA(LC(LG(L)))  &trans  &trans
+&trans      &trans             &trans             &kp LEFT_ARROW     &kp RIGHT_ARROW    &kp PAGE_DOWN        &trans             &kp UP_ARROW       &kp DOWN_ARROW     &kp N3             &trans  &trans
+                                                  &kp LGUI           &trans             &kp SPACE            &kp RET            &trans             &trans
             >;
         };
 
