@@ -194,10 +194,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E                       &kp R                &kp T        &kp Y    &kp U                 &kp I         &kp O    &kp P     &kp MINUS
-&kp ESCAPE      &kp A  &kp S  &kp D                       &kp F                &kp G        &kp H    &kp J                 &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C                       &kp V                &kp B        &kp N    &kp M                 &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
-                              &mt LEFT_CONTROL BACKSPACE  &lsm 1 LEFT_COMMAND  &kp SPACE    &kp RET  &lsm 2 RIGHT_COMMAND  &kp LEFT_ALT
+&kp TAB         &kp Q  &kp W  &kp E                &kp R                &kp T        &kp Y    &kp U                 &kp I         &kp O    &kp P     &kp MINUS
+&kp ESCAPE      &kp A  &kp S  &kp D                &kp F                &kp G        &kp H    &kp J                 &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C                &kp V                &kp B        &kp N    &kp M                 &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
+                              &lsm 1 LEFT_COMMAND  &mt LCTRL BACKSPACE  &kp SPACE    &kp RET  &lsm 2 RIGHT_COMMAND  &kp LEFT_ALT
             >;
         };
 
@@ -212,9 +212,9 @@
 
             bindings = <
 &trans      &kp N1  &kp N2  &kp N3          &kp N4           &kp N5           &kp N6   &kp N7        &kp N8          &kp N9  &kp N0  &trans
-&caps_word  &trans  &trans  &trans          &browsertab      &kp PAGE_UP      &kp N0   &kp N4        &kp N5          &kp N6  &trans  &trans
+&caps_word  &trans  &trans  &to 3           &browsertab      &kp PAGE_UP      &kp N0   &kp N4        &kp N5          &kp N6  &trans  &trans
 &trans      &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp UP_ARROW  &kp DOWN_ARROW  &kp N3  &trans  &trans
-                            &kp LGUI        &trans           &kp SPACE        &kp RET  &mo 3         &trans
+                            &kp LGUI        &trans           &kp SPACE        &kp RET  &trans        &trans
             >;
         };
 
@@ -239,7 +239,7 @@
             display-name = "System";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &kp F11       &kp F12       &to 0         &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
                                     &trans        &trans      &trans            &trans  &trans  &trans
             >;
