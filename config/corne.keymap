@@ -78,6 +78,20 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
+        appswitcher: appswitcher {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_COMMAND>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND>;
+
+            label = "APPSWITCHER";
+        };
     };
 
     combos {
@@ -211,10 +225,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans      &kp N1             &kp N2             &kp N3             &kp N4             &kp N5               &kp N6             &kp N7             &kp N8             &kp N9             &kp N0  &trans
-&caps_word  &kp LA(LC(LG(A)))  &kp LA(LC(LG(S)))  &kp LG(LC(LA(D)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(G)))    &kp LA(LC(LG(H)))  &kp LA(LG(LC(J)))  &kp LA(LC(LG(K)))  &kp LA(LC(LG(L)))  &trans  &trans
-&trans      &trans             &trans             &kp LEFT_ARROW     &kp RIGHT_ARROW    &kp PAGE_DOWN        &trans             &kp UP_ARROW       &kp DOWN_ARROW     &kp N3             &trans  &trans
-                                                  &kp LGUI           &trans             &kp SPACE            &kp RET            &trans             &trans
+&appswitcher  &kp N1             &kp N2             &kp N3             &kp N4             &kp N5               &kp N6             &kp N7             &kp N8             &kp N9             &kp N0  &trans
+&caps_word    &kp LA(LC(LG(A)))  &kp LA(LC(LG(S)))  &kp LG(LC(LA(D)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(G)))    &kp LA(LC(LG(H)))  &kp LA(LG(LC(J)))  &kp LA(LC(LG(K)))  &kp LA(LC(LG(L)))  &trans  &trans
+&trans        &trans             &trans             &kp LEFT_ARROW     &kp RIGHT_ARROW    &kp PAGE_DOWN        &trans             &kp UP_ARROW       &kp DOWN_ARROW     &kp N3             &trans  &trans
+                                                    &kp LGUI           &trans             &kp SPACE            &kp RET            &trans             &trans
             >;
         };
 
