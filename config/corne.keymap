@@ -191,6 +191,11 @@
             bindings = <&paragreat>;
             key-positions = <20 21>;
         };
+
+        mouseless {
+            bindings = <&kp DELETE>;
+            key-positions = <24 38>;
+        };
     };
 
     //
@@ -266,15 +271,6 @@
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans          &trans           &trans            &trans  &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
