@@ -137,13 +137,13 @@
             key-positions = <26 14>;
         };
 
-        copy {
-            bindings = <&kp K_COPY>;
+        cmd+right {
+            bindings = <&kp LG(RIGHT)>;
             key-positions = <28 27>;
         };
 
-        paste {
-            bindings = <&kp K_PASTE>;
+        cmd+left {
+            bindings = <&kp RG(LEFT)>;
             key-positions = <26 27>;
         };
 
@@ -240,10 +240,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&appswitcher  &kp N1             &kp N2             &kp N3              &kp N4               &kp N5               &kp N6             &kp N7             &kp N8             &kp N9             &kp N0  &trans
-&caps_word    &kp LA(LC(LG(A)))  &kp LA(LC(LG(S)))  &kp LG(LC(LA(D)))   &kp LA(LC(LG(F)))    &kp LA(LC(LG(G)))    &kp LA(LC(LG(H)))  &kp LA(LG(LC(J)))  &kp LA(LC(LG(K)))  &kp LA(LC(LG(L)))  &trans  &trans
-&trans        &trans             &trans             &kp LG(LEFT_ARROW)  &kp RG(RIGHT_ARROW)  &kp PAGE_DOWN        &trans             &kp UP_ARROW       &kp DOWN_ARROW     &kp N3             &trans  &trans
-                                                    &trans              &trans               &kp SPACE            &kp RET            &trans             &trans
+&appswitcher  &kp N1             &kp N2             &kp N3             &kp N4             &kp N5               &kp N6             &kp N7             &kp N8             &kp N9             &kp N0  &trans
+&caps_word    &kp LA(LC(LG(A)))  &kp LA(LC(LG(S)))  &kp LG(LC(LA(D)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(G)))    &kp LA(LC(LG(H)))  &kp LA(LG(LC(J)))  &kp LA(LC(LG(K)))  &kp LA(LC(LG(L)))  &trans  &trans
+&trans        &trans             &trans             &kp LEFT_ARROW     &kp RIGHT_ARROW    &kp PAGE_DOWN        &trans             &kp UP_ARROW       &kp DOWN_ARROW     &kp N3             &trans  &trans
+                                                    &trans             &trans             &kp SPACE            &kp RET            &trans             &trans
             >;
         };
 
